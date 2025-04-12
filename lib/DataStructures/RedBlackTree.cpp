@@ -1,9 +1,54 @@
 #include "DataStructures/RedBlackTree.hpp"
 #include <cstdlib>
 
-template <typename T> void DataStructures::RedBlackTree<T>::insert(T *value) {}
+using namespace DataStructures;
+
+template <typename T> void fixTree(Node<T> *node);
+
+template <typename T> void DataStructures::RedBlackTree<T>::insert(T *value) {
+  auto newNode = DataStructures::Node<T>{.value = value, .color = Red};
+
+  Node<T> *pivot = this->root;
+  if (pivot == nullptr) {
+    root = newNode;
+    return;
+  }
+
+  Node<T> *last;
+  while (pivot != nullptr) {
+    last = pivot;
+    if (*(pivot->value) < *value) {
+      pivot = pivot->right;
+    } else {
+      pivot = pivot->left;
+    }
+  }
+
+  if (*(last->value) < *value) {
+    last->right = newNode;
+  } else {
+    last->left = newNode;
+  }
+  newNode.parent = last;
+}
 template <typename T> void DataStructures::RedBlackTree<T>::insert(T value) {
-  auto vv = (T*)malloc(sizeof(T));
-  *vv = value;
-  auto newNode = DataStructures::Node<T> { .value = vv };
+  T *copiedValue = (T *)malloc(sizeof(T));
+  *copiedValue = value;
+  insert(copiedValue);
+}
+
+template <typename T> Node<T> *RedBlackTree<T>::uncle(Node<T> *node) {
+  auto parent = node->parent;
+}
+
+template <typename T> void fixTree(Node<T> *node) {
+  if (node->isNil() ||
+      (node->parent->isRoot() && !node->right && !node->left)) {
+    return;
+  }
+
+  auto current = node;
+  while (current) {
+    current = current;
+  }
 }

@@ -15,10 +15,13 @@ template <typename T> struct Node {
   Color color;
   T *value;
 
+  Node *parent;
+
   Node *right;
   Node *left;
 
-  bool isNil() { return value == nullptr; }
+  bool isNil() { return !value; }
+  bool isRoot() { return !parent; }
 };
 
 //------------------------------------------------------------------------------
@@ -38,6 +41,8 @@ public:
 
 private:
   Node<T> root{.color = Black, .value = nullptr};
+
+  Node<T> *uncle(Node<T> *node);
 };
 
 //------------------------------------------------------------------------------

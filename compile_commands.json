@@ -1,50 +1,50 @@
 [
 {
-  "directory": "/home/beloin/Documents/software/CppDistributedCacheImpl/build",
-  "command": "/usr/bin/c++  -I/home/beloin/Documents/software/CppDistributedCacheImpl/include -std=gnu++14 -o CMakeFiles/distributed_cache.dir/main.cpp.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/main.cpp",
-  "file": "/home/beloin/Documents/software/CppDistributedCacheImpl/main.cpp",
+  "directory": "/home/beloin/Documents/distributed_cache/build",
+  "command": "/usr/bin/c++  -I/home/beloin/Documents/distributed_cache/include -g -std=gnu++14 -o CMakeFiles/distributed_cache.dir/main.cpp.o -c /home/beloin/Documents/distributed_cache/main.cpp",
+  "file": "/home/beloin/Documents/distributed_cache/main.cpp",
   "output": "CMakeFiles/distributed_cache.dir/main.cpp.o"
 },
 {
-  "directory": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-build/googlemock",
-  "command": "/usr/bin/c++  -I/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googlemock/include -I/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googlemock -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest/include -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
-  "file": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "directory": "/home/beloin/Documents/distributed_cache/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -I/home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googlemock/include -I/home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googlemock -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest/include -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
   "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
 },
 {
-  "directory": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-build/googlemock",
-  "command": "/usr/bin/c++  -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googlemock/include -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googlemock -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest/include -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
-  "file": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "directory": "/home/beloin/Documents/distributed_cache/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/c++  -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googlemock/include -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googlemock -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest/include -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
   "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
 },
 {
-  "directory": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-build/googletest",
-  "command": "/usr/bin/c++  -I/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest/include -I/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest/src/gtest-all.cc",
-  "file": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "directory": "/home/beloin/Documents/distributed_cache/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -I/home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest/include -I/home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest/src/gtest-all.cc",
   "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
 },
 {
-  "directory": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-build/googletest",
-  "command": "/usr/bin/c++  -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest/include -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest/src/gtest_main.cc",
-  "file": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "directory": "/home/beloin/Documents/distributed_cache/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/c++  -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest/include -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest -g -std=c++17 -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest/src/gtest_main.cc",
   "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
 },
 {
-  "directory": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/test",
-  "command": "/usr/bin/c++  -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest/include -isystem /home/beloin/Documents/software/CppDistributedCacheImpl/build/_deps/googletest-src/googletest -std=gnu++17 -o CMakeFiles/test_lib.dir/hello.cpp.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/test/hello.cpp",
-  "file": "/home/beloin/Documents/software/CppDistributedCacheImpl/test/hello.cpp",
+  "directory": "/home/beloin/Documents/distributed_cache/build/test",
+  "command": "/usr/bin/c++  -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest/include -isystem /home/beloin/Documents/distributed_cache/build/_deps/googletest-src/googletest -g -std=gnu++17 -o CMakeFiles/test_lib.dir/hello.cpp.o -c /home/beloin/Documents/distributed_cache/test/hello.cpp",
+  "file": "/home/beloin/Documents/distributed_cache/test/hello.cpp",
   "output": "test/CMakeFiles/test_lib.dir/hello.cpp.o"
 },
 {
-  "directory": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/src",
-  "command": "/usr/bin/c++   -std=gnu++14 -o CMakeFiles/src_lib.dir/cache/CacheFacade.cpp.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/src/cache/CacheFacade.cpp",
-  "file": "/home/beloin/Documents/software/CppDistributedCacheImpl/src/cache/CacheFacade.cpp",
+  "directory": "/home/beloin/Documents/distributed_cache/build/src",
+  "command": "/usr/bin/c++   -g -std=gnu++14 -o CMakeFiles/src_lib.dir/cache/CacheFacade.cpp.o -c /home/beloin/Documents/distributed_cache/src/cache/CacheFacade.cpp",
+  "file": "/home/beloin/Documents/distributed_cache/src/cache/CacheFacade.cpp",
   "output": "src/CMakeFiles/src_lib.dir/cache/CacheFacade.cpp.o"
 },
 {
-  "directory": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/lib",
-  "command": "/usr/bin/c++  -I/home/beloin/Documents/software/CppDistributedCacheImpl/include -std=gnu++14 -o CMakeFiles/lib_lib.dir/DataStructures/RedBlackTree.cpp.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/lib/DataStructures/RedBlackTree.cpp",
-  "file": "/home/beloin/Documents/software/CppDistributedCacheImpl/lib/DataStructures/RedBlackTree.cpp",
+  "directory": "/home/beloin/Documents/distributed_cache/build/lib",
+  "command": "/usr/bin/c++  -I/home/beloin/Documents/distributed_cache/include -g -std=gnu++14 -o CMakeFiles/lib_lib.dir/DataStructures/RedBlackTree.cpp.o -c /home/beloin/Documents/distributed_cache/lib/DataStructures/RedBlackTree.cpp",
+  "file": "/home/beloin/Documents/distributed_cache/lib/DataStructures/RedBlackTree.cpp",
   "output": "lib/CMakeFiles/lib_lib.dir/DataStructures/RedBlackTree.cpp.o"
 }
 ]
