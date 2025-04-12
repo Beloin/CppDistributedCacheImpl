@@ -31,6 +31,7 @@ template <typename T> void DataStructures::RedBlackTree<T>::insert(T *value) {
   }
   newNode.parent = last;
 }
+
 template <typename T> void DataStructures::RedBlackTree<T>::insert(T value) {
   T *copiedValue = (T *)malloc(sizeof(T));
   *copiedValue = value;
@@ -39,16 +40,22 @@ template <typename T> void DataStructures::RedBlackTree<T>::insert(T value) {
 
 template <typename T> Node<T> *RedBlackTree<T>::uncle(Node<T> *node) {
   auto parent = node->parent;
+  if (!parent || !(parent->parent)) {
+    return nullptr;
+  }
+  auto grandfather = parent->parent;
+  if (grandfather->left == parent) {
+    return grandfather->right;
+  }
+
+  return grandfather->left;
 }
 
-template <typename T> void fixTree(Node<T> *node) {
+template <typename T> void RedBlackTree<T>::fixTree(Node<T> *node) {
   if (node->isNil() ||
       (node->parent->isRoot() && !node->right && !node->left)) {
     return;
   }
 
-  auto current = node;
-  while (current) {
-    current = current;
-  }
+  auto uncle = this->uncle(node);
 }

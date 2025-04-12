@@ -43,6 +43,7 @@ private:
   Node<T> root{.color = Black, .value = nullptr};
 
   Node<T> *uncle(Node<T> *node);
+  void fixTree(Node<T> *node);
 };
 
 //------------------------------------------------------------------------------
