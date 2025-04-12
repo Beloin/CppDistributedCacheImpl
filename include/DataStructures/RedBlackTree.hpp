@@ -6,17 +6,38 @@
 #define INCLUDE_DATASTRUCTURES_REDBLACKTREE_H
 ////////////////////////////////////////////////////////////////////////////////
 
+#include <cstdint>
 namespace DataStructures {
+
+typedef std::uint8_t Color;
+
+template <typename T> struct Node {
+  Color color;
+  T *value;
+
+  Node *right;
+  Node *left;
+
+  bool isNil() { return value == nullptr; }
+};
 
 //------------------------------------------------------------------------------
 
-class RedBlackTree {
+// TODO: Maybe create an async implementation?
+template <typename T> class RedBlackTree {
 
 public:
+  const static Color Red = 0;
+  const static Color Black = 0;
+
   RedBlackTree() = default;
   ~RedBlackTree() = default;
 
+  void insert(T *value);
+  void insert(T value);
+
 private:
+  Node<T> root{.color = Black, .value = nullptr};
 };
 
 //------------------------------------------------------------------------------
