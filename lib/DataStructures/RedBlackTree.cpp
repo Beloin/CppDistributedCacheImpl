@@ -58,4 +58,7 @@ template <typename T> void RedBlackTree<T>::fixTree(Node<T> *node) {
   }
 
   auto uncle = this->uncle(node);
+  if (uncle->color == Red) {
+
+  }
 }
