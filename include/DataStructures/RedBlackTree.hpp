@@ -43,7 +43,15 @@ private:
   Node<T> root{.color = Black, .value = nullptr};
 
   Node<T> *uncle(Node<T> *node);
+
   void fixTree(Node<T> *node);
+  void leftRotate(Node<T> *node);
+  void rightRotate(Node<T> *node);
+
+  bool isLeft(Node<T> *node);
+  bool isRight(Node<T> *node) { return !isLeft(node); }
+
+  void clear(Node<T> *node);
 };
 
 //------------------------------------------------------------------------------

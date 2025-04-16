@@ -1,4 +1,5 @@
 #include "DataStructures/RedBlackTree.hpp"
+#include <cstddef>
 #include <cstdlib>
 
 using namespace DataStructures;
@@ -59,6 +60,33 @@ template <typename T> void RedBlackTree<T>::fixTree(Node<T> *node) {
 
   auto uncle = this->uncle(node);
   if (uncle->color == Red) {
-
+    node->parent->color = Black;
+    uncle->color = Black;
+    // TODO: make it iterable
+    fixTree(node->parent);
+  } else {
+    if (isRight(node)) {
+    } else {
+    }
   }
 }
+
+template <typename T> bool RedBlackTree<T>::isLeft(Node<T> *node) {
+  return node->parent->left == node;
+}
+
+// TODO: Wronnnngg u dumbasssss
+template <typename T> void RedBlackTree<T>::leftRotate(Node<T> *node) {
+  auto parent = node->parent;
+  parent = node->right;
+  node->right = nullptr;
+  parent->left = node;
+}
+
+template <typename T> void RedBlackTree<T>::rightRotate(Node<T> *node) {
+  auto parent = node->parent;
+  parent = node->left;
+  node->left = nullptr;
+  parent->right = node;
+}
+
