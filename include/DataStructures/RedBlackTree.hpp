@@ -7,6 +7,8 @@
 ////////////////////////////////////////////////////////////////////////////////
 
 #include <cstdint>
+#include <optional>
+
 namespace DataStructures {
 
 typedef std::uint8_t Color;
@@ -27,6 +29,7 @@ template <typename T> struct Node {
 //------------------------------------------------------------------------------
 
 // TODO: Maybe create an async implementation?
+// Must be comparable, maybe something like SearchableNode { key, value }
 template <typename T> class RedBlackTree {
 
 public:
@@ -38,6 +41,8 @@ public:
 
   void insert(T *value);
   void insert(T value);
+
+  std::optional<T> find(T *value);
 
 private:
   Node<T> root{.color = Black, .value = nullptr};

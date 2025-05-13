@@ -31,6 +31,10 @@ template <typename T> void DataStructures::RedBlackTree<T>::insert(T *value) {
     last->left = newNode;
   }
   newNode.parent = last;
+
+  if (newNode.parent->color == Red) {
+    fixTree(newNode);
+  }
 }
 
 template <typename T> void DataStructures::RedBlackTree<T>::insert(T value) {
@@ -71,6 +75,8 @@ template <typename T> void RedBlackTree<T>::fixTree(Node<T> *node) {
       // TODO: Color it
       auto grandfather = node->parent->parent;
       rightRotate(grandfather);
+      grandfather->color = Red;
+      node->parent->color = Red;
     }
   }
 }
@@ -122,3 +128,5 @@ template <typename T> void RedBlackTree<T>::rightRotate(Node<T> *node) {
   left->right = node;
   node->parent = left;
 }
+
+template <typename T> void RedBlackTree<T>::find(Node<T> *node) {}
