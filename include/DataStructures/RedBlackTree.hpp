@@ -42,7 +42,7 @@ public:
   void insert(T *value);
   void insert(T value);
 
-  std::optional<T> find(T *value);
+  Node<T> find(T *value);
 
 private:
   Node<T> root{.color = Black, .value = nullptr};

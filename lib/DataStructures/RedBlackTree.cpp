@@ -129,4 +129,21 @@ template <typename T> void RedBlackTree<T>::rightRotate(Node<T> *node) {
   node->parent = left;
 }
 
-template <typename T> void RedBlackTree<T>::find(Node<T> *node) {}
+template <typename T> Node<T> RedBlackTree<T>::find(T *value) {
+  Node<T> *current = &root;
+
+  while (current) {
+    if (*current->value == *value) {
+      break;
+    }
+
+    if (*(current->value) > *(value)) {
+      current = current->left;
+    } else {
+      current = current->right;
+    }
+  }
+
+  // This creates a copy of the node to be visualized externally
+  return *current;
+}
