@@ -12,6 +12,7 @@ template <typename T> void DataStructures::RedBlackTree<T>::insert(T *value) {
   Node<T> *pivot = this->root;
   if (pivot == nullptr) {
     root = newNode;
+    root.color = Black;
     return;
   }
 
@@ -62,28 +63,45 @@ template <typename T> void RedBlackTree<T>::fixTree(Node<T> *node) {
     return;
   }
 
+  if (node->isRoot()) {
+    node->color = Black;
+    return;
+  }
+
   auto uncle = this->uncle(node);
-  if (uncle->color == Red) {
+  if (uncle != nullptr && uncle->color == Red) {
     node->parent->color = Black;
     uncle->color = Black;
-    // TODO: make it iterable
-    fixTree(node->parent);
+    auto grandfather = node->parent->parent;
+    grandfather->color = Red;
+    fixTree(grandfather);
   } else {
-    if (isRight(node)) {
+    if (isRight(node) && isLeft(node->parent)) {
       leftRotate(node->parent);
+      node = node->left; // Becomes the former parent
+    } else if (isLeft(node) && isRight(node->parent)) {
+      rightRotate(node->parent);
+      node = node->right; // Becomes the former parent
+    }
+
+    node->parent->color = Black;
+    auto grandparent = node->parent->parent;
+    grandparent->color = Red;
+
+    if (isLeft(node) && isLeft(node->parent)) {
+      rightRotate(grandparent);
     } else {
-      // TODO: Color it
-      // TODO: Continue here
-      auto grandfather = node->parent->parent;
-      rightRotate(grandfather);
-      grandfather->color = Red;
-      node->parent->color = Red;
+      leftRotate(grandparent);
     }
   }
 }
 
 template <typename T> bool RedBlackTree<T>::isLeft(Node<T> *node) {
   return node->parent->left == node;
+}
+
+template <typename T> bool RedBlackTree<T>::isRight(Node<T> *node) {
+  return node->parent->right == node;
 }
 
 template <typename T> void RedBlackTree<T>::leftRotate(Node<T> *node) {

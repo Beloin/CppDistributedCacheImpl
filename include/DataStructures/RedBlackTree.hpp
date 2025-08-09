@@ -44,6 +44,9 @@ public:
   void insert(T *value);
   void insert(T value);
 
+  void remove(T *value);
+  void remove(T value);
+
   Node<T> find(T *value);
 
 private:
@@ -56,7 +59,7 @@ private:
   void rightRotate(Node<T> *node);
 
   bool isLeft(Node<T> *node);
-  bool isRight(Node<T> *node) { return !isLeft(node); }
+  bool isRight(Node<T> *node);
 
   void clear(Node<T> *node);
 };
