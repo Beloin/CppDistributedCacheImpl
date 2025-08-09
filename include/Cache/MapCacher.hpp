@@ -1,32 +1,31 @@
 ////////////////////////////////////////////////////////////////////////////////
-// File:        CacheFacade.hpp
+// File:        MapCacher.hpp
 // Author:      Beloin Rodrigues
 ////////////////////////////////////////////////////////////////////////////////
-#ifndef SRC_CACHE_CACHEFACADE_H
-#define SRC_CACHE_CACHEFACADE_H
+#ifndef INCLUDE_CACHE_MAPCACHER_H
+#define INCLUDE_CACHE_MAPCACHER_H
 ////////////////////////////////////////////////////////////////////////////////
 
 #include "Cache/Cacher.hpp"
-#include "DataStructures/RedBlackTree.hpp"
-#include <string>
+#include <unordered_map>
 namespace Cache {
 
 //------------------------------------------------------------------------------
 
-class CacheFacade {
+class MapCacher : public Cacher {
 
 public:
-  CacheFacade(Cacher &cacher) : cacher(cacher) {}
-  ~CacheFacade() = default;
+  MapCacher() = default;
+  ~MapCacher() = default;
 
-  bool getString(const std::string &key, std::string &out);
-  bool setString(const std::string &key, std::string const &out);
+  bool getString(const std::string &key, std::string &out) override;
+  bool setString(const std::string &key, std::string const &out) override;
 
 private:
-  Cacher &cacher;
+  std::unordered_map<std::string, std::string> cache;
 };
 
 //------------------------------------------------------------------------------
 
 } // namespace Cache
-#endif /* SRC_CACHE_CACHEFACADE_H */
+#endif /* INCLUDE_CACHE_MAPCACHER_H */

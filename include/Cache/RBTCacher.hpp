@@ -1,9 +1,9 @@
 ////////////////////////////////////////////////////////////////////////////////
-// File:        CacheFacade.hpp
+// File:        RBTCacher.hpp
 // Author:      Beloin Rodrigues
 ////////////////////////////////////////////////////////////////////////////////
-#ifndef SRC_CACHE_CACHEFACADE_H
-#define SRC_CACHE_CACHEFACADE_H
+#ifndef SRC_CACHE_RBTCACHER_H
+#define SRC_CACHE_RBTCACHER_H
 ////////////////////////////////////////////////////////////////////////////////
 
 #include "Cache/Cacher.hpp"
@@ -11,22 +11,27 @@
 #include <string>
 namespace Cache {
 
+struct __rbtCacherNode {
+  std::string key;
+  std::string result;
+};
+
 //------------------------------------------------------------------------------
 
-class CacheFacade {
+class RBTCacher : public Cacher {
 
 public:
-  CacheFacade(Cacher &cacher) : cacher(cacher) {}
-  ~CacheFacade() = default;
+  RBTCacher() = default;
+  ~RBTCacher() = default;
 
-  bool getString(const std::string &key, std::string &out);
-  bool setString(const std::string &key, std::string const &out);
+  virtual bool getString(const std::string &key, std::string &out) override;
+  virtual bool setString(const std::string &key, std::string const &out) override;
 
 private:
-  Cacher &cacher;
+  DataStructures::RedBlackTree<__rbtCacherNode> data;
 };
 
 //------------------------------------------------------------------------------
 
 } // namespace Cache
-#endif /* SRC_CACHE_CACHEFACADE_H */
+#endif /* SRC_CACHE_RBTCACHER_H */

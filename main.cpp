@@ -1,5 +1,9 @@
+#include "Cache/Cacher.hpp"
+#include "Cache/MapCacher.hpp"
+#include "src/cache/CacheFacade.hpp"
 #include <iostream>
 #include <ctime>
+#include <ostream>
 #include <unistd.h>
 
 int main (int argc, char *argv[]) {
@@ -15,6 +19,15 @@ int main (int argc, char *argv[]) {
   } else {
       std::cerr << "Failed to get logged user" << std::endl;
   }
+
+  // TODO: free this later
+  Cache::CacheFacade facade{*(new Cache::MapCacher{})};
+
+  facade.setString("John", "YES");
+
+  std::string out = "jair";
+  facade.getString("John", out);
+  std::cout << "out: " << out << std::endl;
 
   return 0;
 }

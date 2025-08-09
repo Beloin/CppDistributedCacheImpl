@@ -73,6 +73,7 @@ template <typename T> void RedBlackTree<T>::fixTree(Node<T> *node) {
       leftRotate(node->parent);
     } else {
       // TODO: Color it
+      // TODO: Continue here
       auto grandfather = node->parent->parent;
       rightRotate(grandfather);
       grandfather->color = Red;

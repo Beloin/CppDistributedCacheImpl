@@ -1,32 +1,24 @@
 ////////////////////////////////////////////////////////////////////////////////
-// File:        CacheFacade.hpp
+// File:        Cacher.hpp
 // Author:      Beloin Rodrigues
 ////////////////////////////////////////////////////////////////////////////////
-#ifndef SRC_CACHE_CACHEFACADE_H
-#define SRC_CACHE_CACHEFACADE_H
+#ifndef INCLUDE_CACHE_CACHER_H
+#define INCLUDE_CACHE_CACHER_H
 ////////////////////////////////////////////////////////////////////////////////
 
-#include "Cache/Cacher.hpp"
-#include "DataStructures/RedBlackTree.hpp"
 #include <string>
 namespace Cache {
 
 //------------------------------------------------------------------------------
 
-class CacheFacade {
+class Cacher {
 
 public:
-  CacheFacade(Cacher &cacher) : cacher(cacher) {}
-  ~CacheFacade() = default;
-
-  bool getString(const std::string &key, std::string &out);
-  bool setString(const std::string &key, std::string const &out);
-
-private:
-  Cacher &cacher;
+  virtual bool getString(const std::string &key, std::string &out) = 0;
+  virtual bool setString(const std::string &key, const std::string &out) = 0;
 };
 
 //------------------------------------------------------------------------------
 
 } // namespace Cache
-#endif /* SRC_CACHE_CACHEFACADE_H */
+#endif /* INCLUDE_CACHE_CACHER_H */

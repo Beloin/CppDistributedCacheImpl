@@ -22,11 +22,9 @@ if(ENABLE_TESTS)
   add_subdirectory(test)
 endif()
 
-
 add_executable(distributed_cache main.cpp)
 
 add_subdirectory(src)
 add_subdirectory(lib)
 
 target_link_libraries(distributed_cache src_lib lib_lib)
-

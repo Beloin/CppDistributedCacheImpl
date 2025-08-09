@@ -29,7 +29,8 @@ template <typename T> struct Node {
 //------------------------------------------------------------------------------
 
 // TODO: Maybe create an async implementation?
-// Must be comparable, maybe something like SearchableNode { key, value }
+
+// `T` Must be comparable, maybe something like SearchableNode { key, value }
 template <typename T> class RedBlackTree {
 
 public:
@@ -37,6 +38,7 @@ public:
   const static Color Black = 0;
 
   RedBlackTree() = default;
+  // TODO: Implement destructor
   ~RedBlackTree() = default;
 
   void insert(T *value);

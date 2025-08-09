@@ -37,7 +37,7 @@
 },
 {
   "directory": "/home/beloin/Documents/software/CppDistributedCacheImpl/build/src",
-  "command": "/usr/bin/c++   -g -std=gnu++14 -o CMakeFiles/src_lib.dir/cache/CacheFacade.cpp.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/src/cache/CacheFacade.cpp",
+  "command": "/usr/bin/c++  -I/home/beloin/Documents/software/CppDistributedCacheImpl/include -g -std=gnu++14 -o CMakeFiles/src_lib.dir/cache/CacheFacade.cpp.o -c /home/beloin/Documents/software/CppDistributedCacheImpl/src/cache/CacheFacade.cpp",
   "file": "/home/beloin/Documents/software/CppDistributedCacheImpl/src/cache/CacheFacade.cpp",
   "output": "src/CMakeFiles/src_lib.dir/cache/CacheFacade.cpp.o"
 },
