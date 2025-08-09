@@ -57,6 +57,7 @@ template <typename T> Node<T> *RedBlackTree<T>::uncle(Node<T> *node) {
   return grandfather->left;
 }
 
+// TODO: Create the cases separated instead of this
 template <typename T> void RedBlackTree<T>::fixTree(Node<T> *node) {
   if (node->isNil() ||
       (node->parent->isRoot() && !node->right && !node->left)) {

@@ -35,7 +35,7 @@ template <typename T> class RedBlackTree {
 
 public:
   const static Color Red = 0;
-  const static Color Black = 0;
+  const static Color Black = 1;
 
   RedBlackTree() = default;
   // TODO: Implement destructor
